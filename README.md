@@ -6,13 +6,15 @@
  - [Data Sources and Column Description](#data-sources-and-column-description)
  - [Exploratory Data Analysis](#exploratory-data-analysis)
  - [Discoveries and Insight](#discoveries-and-insights)
+ - [Findings](#findings)
+ - [Workflow and Tools](#workflow-and-tools)
  - [Recommendation](recommendations)
  - [Conclusion](conclusions)
 
 
 ![Dashbaord1](https://github.com/Analyticope/Sales-Revenue-Overview-Analysis/blob/main/Sales%20Revenue%20DB.jpg)
 ![Dashbaord1](https://github.com/Analyticope/Sales-Revenue-Overview-Analysis/blob/main/Sales%20Revenue%20DB2.jpg)
-![Dashbaord1](https://github.com/Analyticope/Sales-Revenue-Overview-Analysis/blob/main/Sales%20Revenue%20DB2.jpg)
+![Dashbaord1](https://github.com/Analyticope/Sales-Revenue-Overview-Analysis/blob/main/Sales%20Revenue%20DB3.jpg)
 
 
  
@@ -22,12 +24,10 @@
    
 ### Project Overview
 ---
-This analysis explores mobile phone sales in 2024 across different regions. It highlights the best-selling models, common price ranges, and customer preferences. It also looks at buyer behavior based on age, gender, and purchase channels, whether online, in-store, or through partners. By combining sales data with location and demographic insights, the report helps identify trends and improve sales strategies for each region.
-
+This project provides a comprehensive overview of sales overview analysis in 2022, 2023, 2024, covering total revenue, costs, profits, and conversion rates. It further breaks down results by month, marketing campaigns, lead sources, and sales channels (in-store vs. online) to uncover key drivers of growth and efficiency.
 
 ### Data Sources and Column Description
- The data used in this project comes from an Excel file. It includes details like phone model, brand, operating system, storage size, color, country, city, price, total 
- revenue, sales channel, as well as customer info like gender, age, and age group.
+ The data used in this project comes from an text CSV file. It includes details like CUST_Data, Marketing_Data, Lead_Source_Data, Channel_Data, Sales_Rep_Data, Sales_Data, Product_Data, Region_Data.
 
 
 ### Tools
@@ -41,30 +41,40 @@ This analysis explores mobile phone sales in 2024 across different regions. It h
 
 ### Data Cleaning/Preparation
 
-  In the initial stage of this project, I performed key data structuring to ensure the dataset was clean, consistent, and analysis-ready. This phase included:
+  In the initial phase of this project, I focused on preparing the dataset to ensure it was clean, consistent, and ready for analysis. The key steps included:
   
-  - Loading and inspecting raw data to understand its structure and quality
+  - Importing and reviewing the raw data to understand its structure and quality
   
-  - Handling missing values to maintain data integrity
+  - Addressing missing values to preserve data accuracy
   
-  - Removing blank rows and irrelevant columns to streamline the dataset
+  - Removing empty rows and unnecessary columns to streamline the dataset
   
-  - Cleaning and formatting data for consistency across all fields
+  - Standardizing and formatting fields to maintain consistency across all records
 
 ### Exploratory Data Analysis
-9 Key Exploratory question from Phone sales dataset, such as:
+3 Key Exploratory question from sales dataset, such as:
 
-Here are 10 key questions this Power BI project aims to answer:
-- Which mobile brands and models are the top sellers overall and in specific countries or cities?
-- How do sales numbers vary by storage size, color, or operating system (Android vs. iOS)?
-- What is the typical customer profile, age group, gender, for different brands or models?
-- How do sales and revenues break down across different sales channels (online, partner, in-store) and payment types?
-- Are there noticeable differences in pricing and sales volume between regions or cities?
-- Which countries or cities generate the highest total revenue and units sold?
-- Are there patterns in customer demographics based on mobile brand, model, or price range?
-- How does sales performance change month over month in 2024?
-- Are there correlations between customer age groups and the type of devices they purchase (for example, younger customers preferring certain brands)?
+Here are 3 key questions this Power BI project aims to answer:
+1. Sales & Campaign Performance
+- How do revenue, cost, and profit change monthly?
+- Which campaigns drive the most revenue?
+- Which lead sources contribute most to sales?
+- Do in-store or online channels perform better?
+- Why is the conversion rate dropping despite higher revenue?
+  
+2. Regional & Country Insights
+- Which regions generate the most revenue?
+- Which countries are top or low performers?
+- Are costs aligned with revenue growth across regions?
+- How do conversion rates differ by country?
+- Do sales channels vary in effectiveness by region?
 
+3. Product Performance
+- Which products earn the highest revenue and profit?
+- Do top-rated products also bring in top sales?
+- Which products get the most views compared to sales?
+- Which low-rated products need improvement?
+- Which price ranges or categories dominate sales?
 
 
 
@@ -86,75 +96,99 @@ Tools & Features Used:
 - Interactive slicers and clear filter button for better UX.
 
 ### Discoveries and Insights
-A. Phone Sales Data
-  - Average Buyers: On average, 39 people purchased phones across the dataset.
-  - Total Revenue: Phone sales brought in a total of $15 million.
-  - Units Sold: Around 19,000 phones were sold through all sales channels.
-  - Average Price per Phone: Each phone sold for about $758 on average.
-    
-B.  Regional and Channel Insights
-  - Top-Performing Country:  India led the way with over $6.9 million in revenue.
-  - Other Strong Markets: Turkey, Bangladesh, and Pakistan also showed strong but varying performance.
-  - Best Sales Channel: Online sales dominated, pulling in $9 million in revenue.
-    
-C. Product Preferences & Trends
-   Operating System Showdown:
- - Android: $11M in revenue, Android clearly led in sales performance
- - iOS: $4M in revenue
- - Top Month: February was the peak month of the fiscal year, generating $1.37 million in sales.
+1. Sales & Campaign Performance 
+- Revenue and profit show an upward trend month by month, even though conversion rates declined slightly.
+- Certain campaigns (e.g., targeted marketing) generated higher sales returns, while others underperformed.
+- Lead sources like social media and website contributed most to revenue compared to referrals or emails.
+- In-store sales still lead in performance, but online channels are showing steady growth.
 
-### Findings & Workflow Tools:
-- UPI turned out to be the most used and highest-earning payment option across all purchases.
+2. Regional & Country Insights 
+- Asia and North America are the strongest revenue-generating regions, with Europe and South America trailing.
+- Top countries (e.g., USA, China, and India) significantly outperformed smaller markets.
+- Some regions show higher costs without matching revenue growth, affecting profitability.
+- Conversion rates vary widely across countries, indicating regional differences in buyer behavior.
+- Sales channel performance differs by region, with online sales growing faster in developed markets.
 
-- Younger customers leaned heavily toward Apple devices, showing a clear brand preference.
+3. Product Performance 
+- Top-selling models drive most of the revenue and profit, while lower-rated products struggle.
+- High customer ratings often align with high sales, confirming that customer satisfaction boosts revenue.
+- Products with high views but low purchases indicate interest but weak conversion (possible pricing or value gap).
+- Low-rated items like Smartwatch 3 and Laptop Pro 14 need quality or marketing improvements.
+- Mid-range products dominate sales, showing that affordability drives customer preference.
 
-- The data went through a full clean-up and transformation process using Power Query to get it ready for analysis.
+### Findings
 
-- I organized the data using a star schema, making it easier to connect facts with dimensions like product, customer, and sales details.
+1. Sales & Campaign Performance
+- Revenue and profit are increasing month by month, but conversion rates are falling slightly.
+- Certain campaigns deliver high ROI, while others add cost without strong returns.
+- Website and social media are the strongest lead sources, outperforming email and referrals.
+- In-store sales still generate more revenue than online, but online sales are steadily growing.
 
-- To make the dashboard more user-friendly, I added interactive filters you can explore the data by country, month, gender, payment method, and year.
+2. Regional & Country Insights
+- Asia and North America contribute the highest share of revenue, while Europe and South America lag behind.
+- The USA, China, and India dominate sales compared to other countries.
+- Some regions show high operating costs without matching revenue growth.
+- Conversion rates vary by country, reflecting differences in customer behavior.
+- Online channels perform better in developed regions, while in-store dominates emerging markets.
 
+3. Product Performance
+- Top-selling models (e.g., flagship phones and mid-range devices) bring in the most revenue and profit.
+- Highly rated products also achieve higher sales, confirming the link between customer satisfaction and revenue.
+- Some products attract high views but low purchases, indicating interest but weak conversion (possibly pricing or features).
+- Poorly rated products (e.g., Smartwatch 3, Laptop Pro 14) need quality improvements or stronger marketing.
+- Mid-range products dominate demand, showing affordability drives buying decisions.
 
-  ### Recommendation
-  After analyzing the 2024 phone sales data, here are some key recommendations to support better business decisions:
+### Workflow & Tools
+ The following workflow and tools were used:
+ 
+1. Data Preparation
+- Cleaned and structured raw data (handled missing values, removed duplicates, standardized formats).
+- Ensured consistency across regions, products, and channels for accurate reporting.
 
-- Focus on High-Performing Regions
-  
-  India and Turkey had the highest sales and revenue. Future marketing and inventory planning should prioritize these regions to drive even stronger results.
+2. Data Analysis & Modeling
+- Applied DAX (Data Analysis Expressions) in Power BI to create measures for revenue, profit, cost, and conversion rates.
+- Built relationships between datasets (sales, regions, products, campaigns) to enable dynamic filtering and drilldowns.
 
-- Boost Online Sales Strategy
-  
-  Online sales brought in the most revenue $9 million outperforming in-store and partner channels. Investing more in digital marketing and online sales platforms is likely 
-  to increase returns.
+3. Dashboard Development
+- Power BI used to design three dashboards:
+- Sales & Campaign Performance (Revenue, cost, profit, conversion, campaigns, channels).
+- Regional & Country Insights (Revenue by region/country, conversion rates, cost vs. revenue, channels).
 
-- Expand Android Offerings
-  
-  Android phones generated $11 million in revenue, far more than iOS. Offering more Android models could help capture a larger market share.
+4. Product Performance (Revenue/profit by product, customer ratings, product views vs. sales, categories).
+- Created interactive visuals (bar charts, line trends, maps, KPIs) for storytelling.
 
-- Optimize UPI Payment Method
-  
-   UPI was the most popular and highest-earning payment option. It’s important to make sure this payment method is well supported and promoted across all sales platforms.
+5. Visualization & Communication
+- Highlighted KPIs (total revenue, profit margin, conversion rates).
+- Used filters for regional, product, and channel analysis.
+- Focused on insights that help improve sales strategy and product positioning.
 
-- Leverage Seasonal Peaks
-  
-  February recorded the highest monthly revenue. Identifying and preparing for similar peak periods can help plan effective promotions and campaigns.
+ 
+### Recommendation
+ 1. Sales & Campaign Performance
+- Improve conversion rates: Although revenue is rising, conversion is dropping. Refine targeting, optimize landing pages, and simplify the checkout process to boost 
+  conversion.
+- Focus on high-ROI campaigns: Allocate more budget to campaigns delivering strong returns and cut back on low-performing ones.
+- Strengthen digital channels: Since online is steadily growing, invest in e-commerce infrastructure, SEO, and digital ads to balance dependence on in-store sales.
+- Leverage lead sources: Double down on website and social media acquisition channels since they outperform email and referrals.
 
-- Use Age-Based Marketing
-  
-   Younger buyers preferred Apple, while older customers leaned toward Samsung. This trend can guide age-targeted marketing and product positioning.
+2. Regional & Country Insights
+- Prioritize high-performing regions: Scale operations and marketing in Asia and North America, which drive the bulk of revenue.
+- Address underperforming regions: In Europe and South America, reassess pricing, promotions, and distribution to increase competitiveness.
+- Optimize cost structure: Reduce overhead in regions where costs are high but revenue growth is weak.
+- Tailor strategies to markets: Customize campaigns by region—online-heavy in developed markets, in-store-focused in emerging markets.
+- Localize products: Introduce region-specific promotions or product bundles to meet local preferences.
 
-- Improve Dashboard Functionality
-  
-   The dashboard includes filters for country, gender, month, payment method, and year making it easy to explore insights. Future updates could add filters for features 
-   like storage size and include predictive analytics for forecasting trends.
-
-   These findings help shape smarter, data-driven strategies to boost sales, improve customer experience, and make better business decisions.
-
+3. Product Performance
+- Promote best-sellers: Expand stock and marketing for top-performing phones and mid-range devices that dominate sales.
+- Enhance poorly rated products: Improve product quality, add missing features, or redesign marketing for underperformers like Smartwatch 3 and Laptop Pro 14.
+- Capitalize on customer ratings: Encourage reviews and testimonials since high ratings align with strong sales.
+- Address view-to-purchase gap: For products with high interest but low conversion, consider price adjustments, discounts, or clearer value messaging.
+- Expand mid-range offerings: Since affordability drives demand, launch more mid-tier models with strong specs at competitive prices.
     
 
 ### Conclusion
-  This dashboard highlights important trends in regions, customer behavior, and product preference. These insights can help guide smarter marketing, better stock planning, 
-  and pricing strategies, all aimed at growing sales and improving customer experience.
+ The analysis shows that while total sales and profits are growing, conversion rates and underperforming campaigns remain key challenges. Regional differences highlight the need for tailored strategies, with Asia and North America leading in revenue while other regions require targeted interventions. At the product level, mid-range devices and highly rated models drive success, whereas poorly rated products and those with low conversion need improvement.
+Overall, these insights emphasize the importance of data-driven decision-making. By focusing on optimizing campaigns, strengthening online channels, improving product quality, and tailoring strategies by region, the business can achieve sustainable growth and better align sales strategies with customer preferences.
 
 
 
